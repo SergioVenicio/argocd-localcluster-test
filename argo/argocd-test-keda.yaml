@@ -4,6 +4,10 @@ metadata:
   name: go-hello
   namespace: go-hello
 spec:
+  minReplicas: 1
+  maxReplicas: 10
+  pollingInterval: 30
+  cooldownPeriod: 300
   scaleTargetRef:
     name: go-hello
   triggers:

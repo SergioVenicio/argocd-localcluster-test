@@ -3,12 +3,6 @@ kind: Deployment
 metadata:
   name: go-hello
 spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: go-hello
-  minReplicas: 1
-  maxReplicas: 10
   revisionHistoryLimit: 3
   selector:
     matchLabels:
