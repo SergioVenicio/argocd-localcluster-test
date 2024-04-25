@@ -9,18 +9,6 @@ spec:
     name: go-hello
   minReplicas: 1
   maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 60
-    resources:
-      name: memory
-      target:
-        type: Utilization
-        averageUtilization: 60
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -35,10 +23,10 @@ spec:
         name: go-hello
         resources:
           requests:
-            memory: 5Mi
-            cpu: 10m
+            memory: 50Mi
+            cpu: 5m
           limits:
-            memory: 10Mi
-            cpu: 50m
+            memory: 100Mi
+            cpu: 10m
         ports:
         - containerPort: 8080

@@ -1,0 +1,17 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: go-hello
+  namespace: go-hello
+spec:
+  scaleTargetRef:
+    name: go-hello
+  triggers:
+  - type: memory
+    metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
+    metadata:
+      value: "50"
+  - type: cpu
+    metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
+    metadata:
+      value: "50"
