@@ -4,7 +4,7 @@ metadata:
   name: go-hello
 spec:
   rules:
-  - host: 127.0.0.1
+  - host: go.hello.com
     http:
       paths:
       - pathType: Prefix
