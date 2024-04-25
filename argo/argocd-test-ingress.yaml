@@ -4,7 +4,7 @@ metadata:
   name: go-hello
 spec:
   rules:
-  - host: go.hello.com
+  - host: 127.0.0.1:8080
     http:
       paths:
       - pathType: Prefix
@@ -13,4 +13,4 @@ spec:
           service:
              name: go-hello
              port:
-               number: 80
+               number: 8080
