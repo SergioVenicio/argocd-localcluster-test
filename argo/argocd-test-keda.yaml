@@ -6,16 +6,12 @@ metadata:
 spec:
   minReplicaCount: 1
   maxReplicaCount: 10
-  pollingInterval: 30
-  cooldownPeriod: 300
+  pollingInterval: 60
+  cooldownPeriod: 60
   scaleTargetRef:
     name: go-hello
   triggers:
   - type: memory
-    metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
+    metricType: AverageValue
     metadata:
-      value: "50"
-  # - type: cpu
-  #   metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
-  #   metadata:
-  #     value: "50"
+      value: "60"
