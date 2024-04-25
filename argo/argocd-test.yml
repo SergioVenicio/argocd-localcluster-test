@@ -28,5 +28,12 @@ spec:
       containers:
       - image: sergio21/go-hello:0.0.1
         name: go-hello
+        resources:
+          requests:
+            memory: 15Mi
+            cpu: 100m
+          limits:
+            memory: 50Mi
+            cpu: 500m
         ports:
         - containerPort: 8080
