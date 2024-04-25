@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: go-hello
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -23,7 +23,7 @@ spec:
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: go-hello
     spec:
       containers:
       - image: sergio21/go-hello:0.0.1
