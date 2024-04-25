@@ -8,10 +8,15 @@ spec:
   maxReplicaCount: 10
   pollingInterval: 60
   cooldownPeriod: 60
+  advanced:
+    horizontalPodAutoscalerConfig:
+      behavior:
+        scaleDown:
+          stabilizationWindowSeconds: 300
   scaleTargetRef:
     name: go-hello
   triggers:
-  - type: memory
+  - type: cpu
     metricType: AverageValue
     metadata:
       value: "60"
