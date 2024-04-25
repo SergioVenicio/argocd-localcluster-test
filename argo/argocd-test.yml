@@ -30,10 +30,10 @@ spec:
         name: go-hello
         resources:
           requests:
-            memory: 15Mi
-            cpu: 100m
+            memory: 5Mi
+            cpu: 10m
           limits:
-            memory: 50Mi
-            cpu: 500m
+            memory: 10Mi
+            cpu: 50m
         ports:
         - containerPort: 8080
