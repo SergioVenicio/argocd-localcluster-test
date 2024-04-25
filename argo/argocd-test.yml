@@ -15,7 +15,12 @@ spec:
       name: cpu
       target:
         type: Utilization
-        averageUtilization: 5
+        averageUtilization: 60
+    resources:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 60
   revisionHistoryLimit: 3
   selector:
     matchLabels:
