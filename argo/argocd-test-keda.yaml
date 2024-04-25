@@ -15,7 +15,7 @@ spec:
     metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
     metadata:
       value: "50"
-  - type: cpu
-    metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
-    metadata:
-      value: "50"
+  # - type: cpu
+  #   metricType: AverageValue # Allowed types are 'Utilization' or 'AverageValue'
+  #   metadata:
+  #     value: "50"
